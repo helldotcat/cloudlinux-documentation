@@ -1022,6 +1022,10 @@ echo 1 > /proc/sys/fs/xfs/cap_res_quota_disable
 ```
 </div>
 
+## User namespace creation restricions
+
+Setting `user.max_user_namespaces` in `/etc/sysctl.d/90-cloudlinux.conf` is responsible for restricting the number of user namespaces that user may create. On new installations of CL, it's equal to `0`.
+
 ## Enter LVE when using cPanel utilities <Badge type="info" text="cPanel"/> <Badge text="CloudLinux OS Shared 7 hybrid"/> <Badge text="experimental" type="warning"/>
 
 cPanel tools might use more resources than desired, so to limit resource usage, you might want to enter the corresponding LVE when using cPanel tools on-behalf of a non-root user.
